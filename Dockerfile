@@ -33,6 +33,7 @@ ENV PYTHONIOENCODING=UTF-8
 
 RUN apt-get install -y \
     less \
+    git \
     man \
     ssh \
     python \
