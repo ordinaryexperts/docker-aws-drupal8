@@ -8,7 +8,8 @@ ENV LAST_UPDATE=2017-03-08
 #####################################################################################
 
 RUN apt-get update && \
-    apt-get upgrade -y
+    DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata locales && \
+    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 # Set the timezone
 RUN echo "America/Los_Angeles" | tee /etc/timezone && \
